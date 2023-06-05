@@ -14,5 +14,5 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Intro to the Tileset Editor"
+config/name="Final Godot project"
 config/icon="res://icon.png"
