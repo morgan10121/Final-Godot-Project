@@ -17,13 +17,11 @@ animations = [ {
 
 [sub_resource type="CircleShape2D" id=3]
 
-[node name="StaticBody2D" type="StaticBody2D"]
-position = Vector2( 18, 18 )
+[node name="Tree" type="StaticBody2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 473, 291 )
+position = Vector2( 4, -17 )
 frames = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 469, 308 )
 shape = SubResource( 3 )
