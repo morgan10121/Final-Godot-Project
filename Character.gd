@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var sprite := $AnimatedSprite
-const SPEED := 700.0
+const SPEED := 400.0
 const HEALTH := 100.0
 const DAMAGE := 5.0
 
