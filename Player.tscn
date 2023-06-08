@@ -203,7 +203,7 @@ zoom = Vector2( 0.65, 0.65 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
-[node name="AttackArea" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="." groups=["Attack"]]
 position = Vector2( 6, 8 )
 scale = Vector2( 0.648437, 0.546875 )
 

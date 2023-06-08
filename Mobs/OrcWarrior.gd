@@ -10,7 +10,7 @@ func _process(_delta):
 
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("Sword"):
+	if area.is_in_group("Attack"):
 		dead = true
 		sprite.play("Death")
 
