@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_topdown.png-5b649b494461437d2bc3f42bcb6d1aa0.stex"
+path="res://.import/Green_crystal1.png-f59badc2f21299cdefa6019736eb9139.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles_topdown.png"
-dest_files=[ "res://.import/tiles_topdown.png-5b649b494461437d2bc3f42bcb6d1aa0.stex" ]
+source_file="res://Assets/Green_crystal1.png"
+dest_files=[ "res://.import/Green_crystal1.png-f59badc2f21299cdefa6019736eb9139.stex" ]
 
 [params]
 

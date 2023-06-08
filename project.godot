@@ -17,6 +17,10 @@ _global_script_class_icons={
 config/name="Final Godot project"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://Global.gd"
+
 [input]
 
 ui_left={
