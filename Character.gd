@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		
 	elif Input.is_action_pressed("move_down") and isAttacking == false:
 		sprite.play("Run")
-	
+
 	else:
 		if isAttacking == false:
 			sprite.play("Idle")
