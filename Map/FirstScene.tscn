@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/tiles_topdown.png" type="Texture" id=4]
 [ext_resource path="res://Grass.tres" type="TileSet" id=5]
 [ext_resource path="res://Obstacles.tres" type="TileSet" id=6]
-[ext_resource path="res://GreenGem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://VioletGem.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tiles_topdown.png 0"
@@ -121,8 +121,8 @@ position = Vector2( 1095, 127 )
 [node name="Tree9" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 220, -30 )
 
-[node name="Area2D" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 447, 346 )
+[node name="VioletGem" parent="." instance=ExtResource( 7 )]
+position = Vector2( 447, 326 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -133,7 +133,7 @@ polygon = PoolVector2Array( 19, 120, 53, 120, 54, 135, 70, 135, 71, 150, 284, 15
 polygon = PoolVector2Array( 19, 121, 19, -16, 39, -15, 38, -34, 52, -34, 52, -50, 235, -49, 236, -33, 251, -33, 252, 15, 274, 15, 274, 30, 350, 30, 349, 15, 461, 15, 459, -102, 5, -102, 5, 124 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 465, 15, 465, 46, 483, 46, 483, 60, 499, 61, 499, 75, 515, 76, 515, 94, 573, 94, 573, 77, 589, 77, 589, 44, 604, 44, 604, 29, 636, 29, 635, 15, 654, 15, 653, -84, 668, -84, 668, -101, 698, -100, 700, -119, 950, -118, 951, -101, 1015, -101, 1015, -84, 1077, -84, 1077, -68, 1109, -67, 1110, -37, 1143, -36, 1143, -19, 1262, -19, 1262, -213, 455, -212 )
+polygon = PoolVector2Array( 465, 15, 465, 46, 483, 46, 483, 60, 499, 61, 499, 75, 515, 76, 515, 88, 572, 89, 573, 77, 589, 77, 589, 44, 604, 44, 604, 29, 636, 29, 635, 15, 654, 15, 653, -84, 668, -84, 668, -101, 698, -100, 700, -119, 950, -118, 951, -101, 1015, -101, 1015, -84, 1077, -84, 1077, -68, 1109, -67, 1110, -37, 1143, -36, 1143, -19, 1262, -19, 1262, -213, 455, -212 )
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( 1, 0 )
