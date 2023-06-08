@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mobs/OrceWarrior.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Grass.tres" type="TileSet" id=5]
 [ext_resource path="res://Obstacles.tres" type="TileSet" id=6]
 [ext_resource path="res://VioletGem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Pillar.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tiles_topdown.png 0"
@@ -120,6 +121,12 @@ position = Vector2( 1095, 127 )
 
 [node name="Tree9" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 220, -30 )
+
+[node name="MagicPillar" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1234, 76 )
+
+[node name="StaticBody2D" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1230, -48 )
 
 [node name="VioletGem" parent="." instance=ExtResource( 7 )]
 position = Vector2( 447, 326 )
