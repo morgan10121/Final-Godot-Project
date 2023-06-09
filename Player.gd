@@ -2,22 +2,34 @@ extends KinematicBody2D
 
 onready var sprite := $AnimatedSprite
 
-const SPEED = 250.0
+const SPEED = 200.0
 var health = 100
 var characterDir = "right"
 
 var isAttacking = false
 var enemy_in_range = false
 var enemy_cooldown = false
+var is_alive = true
 
 func _physics_process(delta: float) -> void:
+	player_movement()
+	player_attack()
+	enemy_attack()
+	
+	if health <= 0:
+		is_alive = false
+		health = 0
+		self.queue_free()
+		
+		
+func player_movement():	
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	if Input.is_action_pressed("move_right") and isAttacking == false:
 		sprite.flip_h = false
 		characterDir = "right"
 		sprite.play("Run")
-		
+
 	elif Input.is_action_pressed("move_left") and isAttacking == false:
 		sprite.flip_h = true
 		characterDir = "left"
@@ -32,7 +44,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		if isAttacking == false:
 			sprite.play("Idle")
-			
+
+	var velocity := direction * SPEED
+	move_and_slide(velocity)
+	
+func player_attack():
 	if Input.is_action_just_pressed("attack1"):
 		sprite.play("Attack")
 		isAttacking = true
@@ -40,9 +56,6 @@ func _physics_process(delta: float) -> void:
 			$AttackArea/CollisionShape2D.disabled = false
 		if characterDir == "left":
 			$AttackArea/CollisionShape2D2.disabled = false
-
-	var velocity := direction * SPEED
-	move_and_slide(velocity)
 
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "Attack" and characterDir == "right":
@@ -52,14 +65,6 @@ func _on_AnimatedSprite_animation_finished():
 	elif sprite.animation == "Attack" and characterDir == "left":
 		$AttackArea/CollisionShape2D2.disabled = true
 		isAttacking = false
-
-
-func _on_hit_box_area_entered(area):
-	if area.is_in_group("Attack1"):
-		if health == 0:
-			sprite.play("Death")
-		else:
-			health -= 10
 			
 func player():
 	pass
@@ -71,3 +76,13 @@ func _on_hit_box_body_entered(body):
 func _on_hit_box_body_exited(body):
 	if body.has_method("enemy"):
 		enemy_in_range = false
+		
+func enemy_attack():
+	if enemy_in_range == true and enemy_cooldown == true:
+		health -= 10
+		enemy_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+
+func _on_attack_cooldown_timeout():
+	enemy_cooldown = true

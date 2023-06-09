@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mobs/OrceWarrior.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Grass.tres" type="TileSet" id=5]
 [ext_resource path="res://Obstacles.tres" type="TileSet" id=6]
 [ext_resource path="res://VioletGem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Map/FirstScene.gd" type="Script" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tiles_topdown.png 0"
@@ -58,7 +59,11 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.375, 86 )
+
+[node name="FirstScene" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -173,5 +178,15 @@ polygon = PoolVector2Array( 308, 390, 327, 390, 327, 405, 359, 405, 359, 423, 48
 polygon = PoolVector2Array( 571, 262, 554, 262, 553, 237, 491, 237, 491, 222, 458, 221, 459, 180, 474, 180, 475, 165, 490, 164, 491, 149, 564, 149, 564, 167, 595, 167, 596, 182, 613, 182, 615, 198, 631, 200, 631, 214, 695, 214, 696, 229, 710, 229, 711, 246, 809, 247, 808, 229, 841, 230, 840, 199, 857, 198, 858, 179, 984, 180, 984, 163, 1014, 163, 1013, 150, 1111, 149, 1111, 131, 1259, 131, 1260, 299 )
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -6, -11 )
-polygon = PoolVector2Array( 1265, -16, 1263, 148, 1387, 150, 1382, -17 )
+position = Vector2( -74, -8 )
+scale = Vector2( 1.05527, 1 )
+polygon = PoolVector2Array( 1265, -16, 1266.78, 148, 1384, 148, 1382, -16 )
+
+[node name="transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transition_point"]
+position = Vector2( 1261, 59 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="transition_point" to="." method="_on_transition_point_body_entered"]
+[connection signal="body_exited" from="transition_point" to="." method="_on_transition_point_body_exited"]
