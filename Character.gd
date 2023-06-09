@@ -1,10 +1,9 @@
 extends KinematicBody2D
 
 onready var sprite := $AnimatedSprite
-const SPEED := 250.0
-const HEALTH := 100.0
-const DAMAGE := 5.0
 
+const SPEED = 250.0
+var health = 100
 var characterDir = "right"
 var isAttacking = false
 
@@ -50,3 +49,15 @@ func _on_AnimatedSprite_animation_finished():
 	elif sprite.animation == "Attack" and characterDir == "left":
 		$AttackArea/CollisionShape2D2.disabled = true
 		isAttacking = false
+
+
+func _on_hit_box_area_entered(area):
+	if area.is_in_group("Attack1"):
+		if health == 0:
+			sprite.play("Death")
+		else:
+			health -= 10
+			
+func player():
+	pass
+
