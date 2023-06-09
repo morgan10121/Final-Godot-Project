@@ -47,5 +47,14 @@ func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "hurt":
 		in_combat = false
 		
+	if sprite.animation == "attack":
+		in_combat = false
+		
 	if sprite.animation == "death":
 		queue_free()
+
+
+func _on_attack_range_body_entered(body):
+	if body.has_method("player"):
+		in_combat = true
+		sprite.play("attack")
