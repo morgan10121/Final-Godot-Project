@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Plant.png-235210716b3746c8c175db921d5b9106.stex"
+path="res://.import/wall-8 - 2 tiles tall-transparency.png-290ec8d606f02d24a42092754139ff96.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TX Plant.png"
-dest_files=[ "res://.import/TX Plant.png-235210716b3746c8c175db921d5b9106.stex" ]
+source_file="res://wall-8 - 2 tiles tall-transparency.png"
+dest_files=[ "res://.import/wall-8 - 2 tiles tall-transparency.png-290ec8d606f02d24a42092754139ff96.stex" ]
 
 [params]
 

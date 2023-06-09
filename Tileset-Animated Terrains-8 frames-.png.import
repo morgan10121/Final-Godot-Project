@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Plant.png-235210716b3746c8c175db921d5b9106.stex"
+path="res://.import/Tileset-Animated Terrains-8 frames-.png-e9387d7b30150f2a395cb0cf23b8b49c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TX Plant.png"
-dest_files=[ "res://.import/TX Plant.png-235210716b3746c8c175db921d5b9106.stex" ]
+source_file="res://Tileset-Animated Terrains-8 frames-.png"
+dest_files=[ "res://.import/Tileset-Animated Terrains-8 frames-.png-e9387d7b30150f2a395cb0cf23b8b49c.stex" ]
 
 [params]
 
