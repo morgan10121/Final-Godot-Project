@@ -26,5 +26,5 @@ func _on_Scene2_body_exited(body):
 func change_scene():
 	if global.transition_scene == true:
 		if global.current_scene == "Scene1":
-			get_tree().change_scene_to_file("res://Map/Scene2.tscn")
+			get_tree().change_scene("res://Map/Scene2.tscn")
 			global.finish_change_scene()
