@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Map/Grass.tres" type="TileSet" id=2]
-[ext_resource path="res://altar 224x288 - standard.png" type="Texture" id=3]
+[ext_resource path="res://Assets/altar 224x288 - standard.png" type="Texture" id=3]
 [ext_resource path="res://Wanderer Magican/Idle.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -229,13 +229,14 @@ tile_data = PoolIntArray( -196591, 4, 0, -65531, 4, 0, -65523, 5, 0, -65517, 5, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 494, 256 )
 frames = SubResource( 40 )
+frame = 29
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 496, 205 )
 scale = Vector2( 0.792969, 0.742188 )
 frames = SubResource( 49 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

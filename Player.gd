@@ -4,17 +4,21 @@ onready var sprite := $AnimatedSprite
 
 const SPEED = 180.0
 var health = 100
-
 var characterDir = "right"
 var inCombat = false
-var enemy_in_range = false
-var enemy_cooldown = true
 var is_alive = true
+
+var orc_warrior_in_range = false
+var orc_beserk_in_range = false
+
+var orc_warrior_cooldown = true
+var orc_beserk_cooldown = true
+
 
 func _physics_process(delta: float) -> void:
 	player_movement()
 	player_attack()
-	orc_warrior_attack()
+	enemy_attack()
 	
 	if health <= 0:
 		is_alive = false
@@ -74,21 +78,36 @@ func player():
 
 func _on_hit_box_body_entered(body):
 	if body.has_method("enemy"):
-		enemy_in_range = true
+		orc_warrior_in_range = true
+		
+	if body.has_method("orc_beserk"):
+		orc_beserk_in_range = true
 		
 func _on_hit_box_body_exited(body):
 	if body.has_method("enemy"):
-		enemy_in_range = false
+		orc_warrior_in_range = false
+	
+	if body.has_method("orc_beserk"):
+		orc_beserk_in_range = false	
 		
-func orc_warrior_attack():
-	if enemy_in_range and enemy_cooldown == true:
+func enemy_attack():
+	if orc_warrior_in_range and orc_warrior_cooldown == true:
 		inCombat = true
 		sprite.play("Hurt")
 		health -= 10
-		enemy_cooldown = false
+		orc_warrior_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+		
+	if orc_beserk_in_range and orc_beserk_cooldown == true:
+		inCombat = true 
+		sprite.play("Hurt")
+		health -= 15
+		orc_beserk_cooldown = false
 		$attack_cooldown.start()
 		print(health)
 
 func _on_attack_cooldown_timeout():
-	enemy_cooldown = true
+	orc_warrior_cooldown = true
+	orc_beserk_cooldown = true
 
