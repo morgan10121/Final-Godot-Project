@@ -1,9 +1,9 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Map/Grass.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/altar 224x288 - standard.png" type="Texture" id=3]
-[ext_resource path="res://Wanderer Magican/Idle.png" type="Texture" id=4]
+[ext_resource path="res://Fire Mage/Idle.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -197,13 +197,9 @@ region = Rect2( 640, 0, 128, 128 )
 atlas = ExtResource( 4 )
 region = Rect2( 768, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=57]
-atlas = ExtResource( 4 )
-region = Rect2( 896, 0, 128, 128 )
-
 [sub_resource type="SpriteFrames" id=49]
 animations = [ {
-"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ) ],
 "loop": true,
 "name": "default",
 "speed": 8.0
@@ -229,14 +225,13 @@ tile_data = PoolIntArray( -196591, 4, 0, -65531, 4, 0, -65523, 5, 0, -65517, 5, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 494, 256 )
 frames = SubResource( 40 )
-frame = 32
+frame = 7
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 496, 205 )
+position = Vector2( 505, 214 )
 scale = Vector2( 0.792969, 0.742188 )
 frames = SubResource( 49 )
-frame = 5
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -279,4 +274,5 @@ align = 1
 valign = 1
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
