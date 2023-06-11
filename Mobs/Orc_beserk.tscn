@@ -8,32 +8,26 @@
 [ext_resource path="res://Orc_Berserk/Walk.png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 192, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 288, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 96, 0, 96, 96 )
 
@@ -66,72 +60,58 @@ atlas = ExtResource( 4 )
 region = Rect2( 192, 224, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 96, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 96, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 192, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 288, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 384, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 96, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 192, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 288, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 480, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 576, 0, 96, 96 )
 
@@ -164,7 +144,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=22]
-radius = 228.107
+radius = 191.042
 
 [sub_resource type="CircleShape2D" id=23]
 radius = 28.0179
@@ -181,7 +161,7 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 21 )
 animation = "walk"
-frame = 1
+frame = 5
 playing = true
 
 [node name="detection_area" type="Area2D" parent="."]
