@@ -24,12 +24,10 @@ atlas = ExtResource( 3 )
 region = Rect2( 288, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 96, 96 )
 
@@ -62,12 +60,10 @@ atlas = ExtResource( 2 )
 region = Rect2( 192, 224, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 96, 96 )
 
@@ -147,11 +143,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 17.0
+
 [sub_resource type="CircleShape2D" id=29]
 radius = 186.687
-
-[sub_resource type="CapsuleShape2D" id=30]
-radius = 12.0
 
 [sub_resource type="CircleShape2D" id=31]
 radius = 28.0
@@ -160,36 +156,40 @@ radius = 28.0
 radius = 46.0109
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-collision_layer = 3
+collision_layer = 4
+collision_mask = 7
 script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 28 )
 animation = "idle"
-frame = 1
+frame = 3
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 26 )
+shape = SubResource( 30 )
 
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+visible = false
 position = Vector2( 0, 25 )
 shape = SubResource( 29 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 26 )
-shape = SubResource( 30 )
 
 [node name="hit_box" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+visible = false
 position = Vector2( 0, 19 )
 shape = SubResource( 31 )
 
 [node name="attack_range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+visible = false
 position = Vector2( 0, 19 )
 shape = SubResource( 32 )
 
