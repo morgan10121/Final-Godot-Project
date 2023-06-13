@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Attack.png-9d74a1dcbc5058a0aebe9cb95dbec117.stex"
+path="res://.import/Take hit.png-25eddcf58c4dec46a4be9e0949266dfb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Attack.png"
-dest_files=[ "res://.import/Attack.png-9d74a1dcbc5058a0aebe9cb95dbec117.stex" ]
+source_file="res://Player/Take hit.png"
+dest_files=[ "res://.import/Take hit.png-25eddcf58c4dec46a4be9e0949266dfb.stex" ]
 
 [params]
 
