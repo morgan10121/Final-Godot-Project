@@ -246,7 +246,7 @@ animations = [ {
 "frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ) ],
 "loop": true,
 "name": "Hurt",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ) ],
 "loop": true,
@@ -278,8 +278,8 @@ script = ExtResource( 5 )
 position = Vector2( 6, -2 )
 scale = Vector2( 0.679905, 0.788324 )
 frames = SubResource( 10 )
-animation = "Attack"
-frame = 10
+animation = "Hurt"
+frame = 5
 speed_scale = 1.5
 playing = true
 
