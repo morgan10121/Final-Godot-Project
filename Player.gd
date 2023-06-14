@@ -23,7 +23,8 @@ func _physics_process(delta: float) -> void:
 	if health <= 0:
 		is_alive = false
 		health = 0
-		self.queue_free()
+		sprite.play("Death")
+		get_tree().change_scene("res://Player_death_screen.tscn")
 		
 		
 func player_movement():	

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_seeker_damage.png-04b432392fe6a20223fd5deed4354155.stex"
+path="res://.import/skeleton_seeker_damage.png-e1f2f24f4485d79a1160853e82baac45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://skeleton_seeker_damage.png"
-dest_files=[ "res://.import/skeleton_seeker_damage.png-04b432392fe6a20223fd5deed4354155.stex" ]
+source_file="res://Assets/skeleton_seeker_damage.png"
+dest_files=[ "res://.import/skeleton_seeker_damage.png-e1f2f24f4485d79a1160853e82baac45.stex" ]
 
 [params]
 

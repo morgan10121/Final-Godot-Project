@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bat Take Hit.png-7b5726aa9a5f3194d917e133297b2aa5.stex"
+path="res://.import/skeleton_seeker_spawn.png-54f67a624bbcda31f5e241ceddc1b2b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bat Take Hit.png"
-dest_files=[ "res://.import/Bat Take Hit.png-7b5726aa9a5f3194d917e133297b2aa5.stex" ]
+source_file="res://Assets/skeleton_seeker_spawn.png"
+dest_files=[ "res://.import/skeleton_seeker_spawn.png-54f67a624bbcda31f5e241ceddc1b2b2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

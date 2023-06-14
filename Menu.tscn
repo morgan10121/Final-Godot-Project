@@ -1,9 +1,9 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Map/Grass.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/altar 224x288 - standard.png" type="Texture" id=3]
-[ext_resource path="res://Fire Mage/Idle.png" type="Texture" id=4]
+[ext_resource path="res://Player/ninja idle.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -171,35 +171,23 @@ animations = [ {
 
 [sub_resource type="AtlasTexture" id=50]
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 128, 128 )
+region = Rect2( 0, 0, 200, 200 )
 
 [sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 128, 128 )
+region = Rect2( 200, 0, 200, 200 )
 
 [sub_resource type="AtlasTexture" id=52]
 atlas = ExtResource( 4 )
-region = Rect2( 256, 0, 128, 128 )
+region = Rect2( 400, 0, 200, 200 )
 
 [sub_resource type="AtlasTexture" id=53]
 atlas = ExtResource( 4 )
-region = Rect2( 384, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=54]
-atlas = ExtResource( 4 )
-region = Rect2( 512, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 4 )
-region = Rect2( 640, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=56]
-atlas = ExtResource( 4 )
-region = Rect2( 768, 0, 128, 128 )
+region = Rect2( 600, 0, 200, 200 )
 
 [sub_resource type="SpriteFrames" id=49]
 animations = [ {
-"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ) ],
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ) ],
 "loop": true,
 "name": "default",
 "speed": 8.0
@@ -225,13 +213,14 @@ tile_data = PoolIntArray( -196591, 4, 0, -65531, 4, 0, -65523, 5, 0, -65517, 5, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 494, 256 )
 frames = SubResource( 40 )
-frame = 36
+frame = 35
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 505, 214 )
+position = Vector2( 492, 242 )
 scale = Vector2( 0.792969, 0.742188 )
 frames = SubResource( 49 )
+frame = 2
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -269,7 +258,7 @@ margin_top = -12.0
 margin_right = -14.0
 margin_bottom = 28.0
 rect_scale = Vector2( 2, 2 )
-text = "Mage Runner"
+text = "Ninja  Runner"
 align = 1
 valign = 1
 

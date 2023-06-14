@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_skeleton_attack.png-52f1670825ea909f91e92872bd1101a5.stex"
+path="res://.import/skeleton_seeker_death.png-7c08504be65ea7bb1b274690f246a1b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://skeleton_skeleton_attack.png"
-dest_files=[ "res://.import/skeleton_skeleton_attack.png-52f1670825ea909f91e92872bd1101a5.stex" ]
+source_file="res://Assets/skeleton_seeker_death.png"
+dest_files=[ "res://.import/skeleton_seeker_death.png-7c08504be65ea7bb1b274690f246a1b3.stex" ]
 
 [params]
 

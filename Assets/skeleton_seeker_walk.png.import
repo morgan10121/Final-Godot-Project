@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Attack.png-9d74a1dcbc5058a0aebe9cb95dbec117.stex"
+path="res://.import/skeleton_seeker_walk.png-bba35a1d62a140d5223a6b5059d90623.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Attack.png"
-dest_files=[ "res://.import/Attack.png-9d74a1dcbc5058a0aebe9cb95dbec117.stex" ]
+source_file="res://Assets/skeleton_seeker_walk.png"
+dest_files=[ "res://.import/skeleton_seeker_walk.png-bba35a1d62a140d5223a6b5059d90623.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
