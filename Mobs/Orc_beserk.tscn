@@ -159,9 +159,9 @@ radius = 51.0882
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1, 19 )
 frames = SubResource( 21 )
-animation = "walk"
-frame = 6
+animation = "idle"
 playing = true
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -172,6 +172,7 @@ position = Vector2( -5, 19 )
 shape = SubResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -6, 19 )
 shape = SubResource( 23 )
 

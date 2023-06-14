@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Map/Grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Mobs/Orc_beserk.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/wall-8 - 2 tiles tall.png" type="Texture" id=10]
 [ext_resource path="res://Chest.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Mobs/Skeleton_seeker.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tileset-Terrain2.png 0"
@@ -291,6 +292,20 @@
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
+6/name = "Atlas-Props.png 6"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 256, 64, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
 
 [node name="Scene2" type="Node2D"]
 
@@ -328,7 +343,7 @@ tile_data = PoolIntArray( -851984, 0, 65536, -851983, 0, 2, -851982, 0, 2, -8519
 tile_set = SubResource( 4 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -655340, 536870915, 0, -524298, 536870915, 0, -524264, 3, 0, -524261, 536870915, 0, -262123, 4, 0, -262114, 3, 0, -131051, 536870915, 0, -131039, 3, 0, 65526, 536870915, 0, 65550, 0, 0, 196588, 3, 0, 196637, 536870915, 0, 327674, 3, 0, 262178, 536870915, 0, 393197, 3, 0, 458744, 4, 0, 458785, 536870915, 0, 786413, 536870915, 0, 917494, 536870917, 0, 1572860, 536870915, 0, 1638385, 5, 0, 1638386, 536870915, 0, 1638392, 4, 0, 1703928, 3, 0, 1703934, 3, 0, 1638423, 0, 0, 1900555, 5, 0 )
+tile_data = PoolIntArray( -655340, 536870915, 0, -524298, 536870915, 0, -524264, 3, 0, -524261, 536870915, 0, -262123, 4, 0, -262114, 3, 0, -131051, 536870915, 0, -131039, 3, 0, 65526, 536870915, 0, 65550, 0, 0, 196588, 3, 0, 196637, 536870915, 0, 327673, 6, 0, 327674, 3, 0, 262157, 6, 0, 262178, 536870915, 0, 393197, 3, 0, 458744, 4, 0, 458785, 536870915, 0, 786413, 536870915, 0, 917494, 536870917, 0, 1572860, 536870915, 0, 1638385, 5, 0, 1638386, 536870915, 0, 1638392, 4, 0, 1703928, 3, 0, 1703934, 3, 0, 1638423, 0, 0, 1900555, 5, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_mask = 7
@@ -391,3 +406,6 @@ position = Vector2( 180, 559 )
 
 [node name="Yellow_tree5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 220, -97 )
+
+[node name="KinematicBody2D3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 729, 591 )

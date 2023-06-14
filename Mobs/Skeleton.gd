@@ -12,6 +12,7 @@ var in_combat = false
 func _physics_process(delta):
 	if health <= 0:
 		sprite.play("death")
+		health = 0
 		
 	if player_chase and in_combat == false:
 		position += (player.position - position)/speed
