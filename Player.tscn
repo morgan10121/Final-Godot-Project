@@ -126,7 +126,7 @@ animations = [ {
 "frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
 "loop": true,
 "name": "Hurt",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ) ],
 "loop": true,
@@ -159,6 +159,7 @@ position = Vector2( 4.99998, 23 )
 scale = Vector2( 0.814952, 0.788324 )
 frames = SubResource( 10 )
 animation = "Idle"
+frame = 1
 speed_scale = 1.5
 playing = true
 
