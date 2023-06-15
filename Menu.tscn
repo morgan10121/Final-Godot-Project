@@ -213,14 +213,14 @@ tile_data = PoolIntArray( -196591, 4, 0, -65531, 4, 0, -65523, 5, 0, -65517, 5, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 494, 256 )
 frames = SubResource( 40 )
-frame = 25
+frame = 23
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 492, 242 )
 scale = Vector2( 0.792969, 0.742188 )
 frames = SubResource( 49 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
