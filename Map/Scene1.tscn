@@ -472,7 +472,7 @@
 16/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 366.5, 46.7813 )
+extents = Vector2( 366.5, 54.3906 )
 
 [node name="Scene1" type="Node2D"]
 script = ExtResource( 10 )
@@ -546,7 +546,7 @@ position = Vector2( 318, 429 )
 [node name="Scene_transition" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene_transition"]
-position = Vector2( 1126, 1189 )
+position = Vector2( 1126, 1181.39 )
 shape = SubResource( 6 )
 
 [connection signal="body_entered" from="Scene_transition" to="." method="_on_Scene2_body_entered"]

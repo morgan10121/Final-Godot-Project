@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		is_alive = false
 		health = 0
 		sprite.play("Death")
-		get_tree().change_scene("res://Player_death_screen.tscn")
+		
 		
 		
 func player_movement():	
@@ -73,6 +73,9 @@ func _on_AnimatedSprite_animation_finished():
 		
 	if sprite.animation == "Hurt":
 		inCombat = false
+		
+	if sprite.animation == "Death":
+		get_tree().change_scene("res://Player_death_screen.tscn")
 			
 func player():
 	pass
