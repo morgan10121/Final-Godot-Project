@@ -213,13 +213,14 @@ tile_data = PoolIntArray( -196591, 4, 0, -65531, 4, 0, -65523, 5, 0, -65517, 5, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 494, 256 )
 frames = SubResource( 40 )
-frame = 33
+frame = 35
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 492, 242 )
 scale = Vector2( 0.792969, 0.742188 )
 frames = SubResource( 49 )
+frame = 3
 playing = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -252,10 +253,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -114.0
-margin_top = -12.0
-margin_right = -14.0
-margin_bottom = 28.0
+margin_left = -104.0
+margin_top = -27.0
+margin_right = -4.0
+margin_bottom = 13.0
 rect_scale = Vector2( 2, 2 )
 text = "Ninja  Runner"
 align = 1
