@@ -21,3 +21,5 @@ func _on_detection_area_area_entered(area):
 
 func _on_AnimatedSprite_animation_finished():
 	$AnimatedSprite.play("opened")
+	
+	

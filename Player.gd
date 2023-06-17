@@ -7,6 +7,7 @@ var health = 100
 var characterDir = "right"
 var inCombat = false
 var is_alive = true
+var heal = true
 
 var orc_warrior_in_range = false
 var orc_beserk_in_range = false
@@ -19,6 +20,8 @@ func _physics_process(delta: float) -> void:
 	player_movement()
 	player_attack()
 	enemy_attack()
+	update_health()
+	gem()
 	
 	if health <= 0:
 		is_alive = false
@@ -114,4 +117,20 @@ func enemy_attack():
 func _on_attack_cooldown_timeout():
 	orc_warrior_cooldown = true
 	orc_beserk_cooldown = true
+
+
+func update_health():
+	var healthbar := $healthbar
+	healthbar.value = health
+	
+	if health >= 100:
+		healthbar.visible = false
+	else: 
+		healthbar.visible = true
+
+func gem():
+	if global.has_gem == true and heal == true:
+		health += 20
+		heal = false
+
 

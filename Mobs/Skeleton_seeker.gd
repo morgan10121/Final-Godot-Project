@@ -10,6 +10,7 @@ var player = null
 var in_combat = false
 
 func _physics_process(delta):
+	update_health() 
 	if health <= 0:
 		sprite.play("death")
 		health = 0
@@ -61,3 +62,13 @@ func _on_attack_range_body_entered(body):
 	if body.has_method("player"):
 		in_combat = true
 		sprite.play("attack")
+
+
+func update_health():
+	var healthbar := $healthbar
+	healthbar.value = health
+	
+	if health >= 100:
+		healthbar.visible = false
+	else: 
+		healthbar.visible = true
