@@ -7,7 +7,7 @@ const ROCKS := [
 	#preload(),
 ]
 
-const CELL_SIZE := Vector2(128, 128)
+const CELL_SIZE := Vector2(32, 32)
 
 func get_random_rock() -> Sprite:
 	var rock_random_index := randi() % ROCKS.size()
