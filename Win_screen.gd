@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Play_again_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene("res://Menu(START HERE).tscn")
 
 
 func _on_Quit_pressed():

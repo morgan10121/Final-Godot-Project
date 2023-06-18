@@ -5,6 +5,7 @@
 [ext_resource path="res://Map/Grass.tres" type="TileSet" id=3]
 [ext_resource path="res://Player_death_screen.gd" type="Script" id=4]
 
+
 [sub_resource type="TileSet" id=1]
 0/name = "TX Props.png 0"
 0/texture = ExtResource( 1 )

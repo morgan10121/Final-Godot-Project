@@ -28,3 +28,5 @@ func change_scene():
 		if global.current_scene == "Scene1":
 			get_tree().change_scene("res://Map/Scene2.tscn")
 			global.finish_change_scene()
+			
+

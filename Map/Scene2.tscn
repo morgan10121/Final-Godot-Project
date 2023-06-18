@@ -6,12 +6,13 @@
 [ext_resource path="res://Assets/Atlas-Props.png" type="Texture" id=4]
 [ext_resource path="res://Assets/TX Props.png" type="Texture" id=5]
 [ext_resource path="res://Mobs/Skeleton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://YellowTree.tscn" type="PackedScene" id=7]
-[ext_resource path="res://VioletGem.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Map/Map Pieces/YellowTree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Map/Map Pieces/VioletGem.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Mobs/Orc_beserk.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/wall-8 - 2 tiles tall.png" type="Texture" id=10]
-[ext_resource path="res://Chest.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Map/Map Pieces/Chest.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Mobs/Skeleton_seeker.tscn" type="PackedScene" id=12]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tileset-Terrain2.png 0"
