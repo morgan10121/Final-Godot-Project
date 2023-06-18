@@ -8,16 +8,18 @@ var health = 50
 var player_chase = false
 var player = null
 var in_combat = false
+var is_alive = true
 
 func _physics_process(delta):
-	if health <= 0:
+	if health <= 0 and is_alive == true:
+		is_alive = false
 		sprite.play("death")
 		health = 0
 		
 	if player_chase and in_combat == false:
 		position += (player.position - position)/speed
 		sprite.play("walk")
-		
+			
 		if(player.position.x - position.x) < 0:
 			sprite.flip_h = true
 		else:
@@ -39,7 +41,7 @@ func enemy():
 	pass
 
 func _on_hit_box_area_entered(area):
-	if area.is_in_group("Attack"):
+	if area.is_in_group("Attack") and is_alive == true:
 		in_combat = true
 		print(health)
 		health -= 10

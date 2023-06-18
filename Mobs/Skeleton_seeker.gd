@@ -8,10 +8,12 @@ var health = 100
 var player_chase = false
 var player = null
 var in_combat = false
+var is_alive = true
 
 func _physics_process(delta):
 	update_health() 
-	if health <= 0:
+	if health <= 0 and is_alive == true:
+		is_alive = false
 		sprite.play("death")
 		health = 0
 		

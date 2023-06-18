@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/Tileset-Terrain2.png" type="Texture" id=1]
 [ext_resource path="res://Mobs/Skeleton.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Island.gd" type="Script" id=10]
 [ext_resource path="res://Map/Map Pieces/Chest.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/TX Tileset Grass.png" type="Texture" id=12]
+[ext_resource path="res://Map/Map Pieces/VioletGem.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=2]
 0/name = "Tileset-Terrain2.png 0"
@@ -544,22 +545,6 @@ tile_set = SubResource( 7 )
 format = 1
 tile_data = PoolIntArray( -65540, 1, 0, -65538, 1, 0, -131072, 1, 0, -131070, 1, 0, -131068, 1, 0, 65532, 1, 0, 65534, 1, 0, 0, 1, 0, 2, 1, 0, 4, 1, 0, 9, 1, 0, 65545, 1, 0, 196604, 1, 0, 196606, 1, 0, 131072, 1, 0, 327676, 1, 0, 327678, 1, 0, 262144, 1, 0, 262152, 1, 0, 262157, 1, 0, 262159, 1, 0, 262161, 1, 0, 262163, 1, 0, 262165, 1, 0, 262167, 1, 0, 458749, 1, 0, 458751, 1, 0, 393217, 1, 0, 393223, 1, 0, 393225, 1, 0, 393227, 1, 0, 393229, 1, 0, 393231, 1, 0, 393233, 1, 0, 393235, 1, 0, 393237, 1, 0, 393239, 1, 0, 393242, 1, 0, 589822, 1, 0, 524288, 1, 0, 524297, 1, 0, 524299, 1, 0, 524301, 1, 0, 524313, 1, 0, 524315, 1, 0, 655385, 1, 0, 655387, 1, 0, 786430, 1, 0, 720896, 1, 0, 786459, 1, 0, 851968, 1, 0, 917506, 1, 0, 917508, 1, 0, 917510, 1, 0, 917516, 1, 0, 917529, 1, 0, 917531, 1, 0, 1048578, 1, 0, 1048580, 1, 0, 1048582, 1, 0, 1048584, 1, 0, 1048586, 1, 0, 1048588, 1, 0, 1048599, 1, 0, 1048601, 1, 0, 1048603, 1, 0, 1179658, 1, 0, 1179660, 1, 0, 1179671, 1, 0, 1179673, 1, 0, 1179675, 1, 0, 1310730, 1, 0, 1310732, 1, 0, 1310734, 1, 0, 1310736, 1, 0, 1310741, 1, 0, 1310743, 1, 0, 1310745, 1, 0, 1310747, 1, 0, 1441802, 1, 0, 1441804, 1, 0, 1441806, 1, 0, 1441808, 1, 0, 1441810, 1, 0, 1441812, 1, 0, 1441814, 1, 0, 1441816, 1, 0, 1441818, 1, 0 )
 
-[node name="Map_barriers" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map_barriers"]
-polygon = PoolVector2Array( 121, 116, 121, 268, 206, 268, 207, 402, 177, 402, 177, 498, 146, 499, 147, 688, 185, 688, 186, 751, 218, 751, 218, 777, 985, 777, 988, 878, 1221, 879, 1222, 847, 1293, 847, 1292, 906, 1285, 906, 1285, 885, 1240, 886, 1239, 923, 968, 923, 967, 819, 202, 823, 202, 788, 172, 788, 169, 722, 140, 723, -263, 723, -265, 119 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map_barriers"]
-polygon = PoolVector2Array( 116, 117, 389, 117, 388, 268, 270, 268, 272, 403, 363, 404, 363, 498, 398, 497, 398, 625, 523, 625, 524, 656, 985, 654, 986, 564, 1014, 564, 1014, 531, 1452, 532, 1451, 37, 116, 38 )
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map_barriers"]
-polygon = PoolVector2Array( 1449, 533, 1450, 877, 1404, 876, 1404, 843, 1360, 843, 1360, 905, 1368, 905, 1368, 880, 1386, 880, 1387, 912, 1736, 911, 1737, 532 )
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map_barriers"]
-position = Vector2( 6, -25 )
-polygon = PoolVector2Array( 1387, 931, 1419, 977, 1430, 1059, 1433, 1220, 1215, 1259, 855, 1170, 860, 1064, 909, 969, 968, 923, 965, 816, 883, 829, 757, 1019, 734, 1236, 1216, 1328, 1500, 1270, 1501, 1077, 1476, 962, 1618, 895, 1498, 895 )
-
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Yellow_tree" parent="YSort" instance=ExtResource( 9 )]
@@ -579,6 +564,25 @@ position = Vector2( 1219, 672 )
 
 [node name="Chest" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 318, 429 )
+
+[node name="VioletGem" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 1205, 1031 )
+
+[node name="Map_barriers" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map_barriers"]
+polygon = PoolVector2Array( 121, 116, 121, 268, 206, 268, 207, 402, 177, 402, 177, 498, 146, 499, 147, 688, 185, 688, 186, 751, 218, 751, 218, 777, 985, 777, 988, 878, 1221, 879, 1222, 847, 1293, 847, 1292, 906, 1285, 906, 1285, 885, 1240, 886, 1239, 923, 968, 923, 967, 819, 202, 823, 202, 788, 172, 788, 169, 722, 140, 723, -263, 723, -265, 119 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map_barriers"]
+polygon = PoolVector2Array( 116, 117, 389, 117, 388, 268, 270, 268, 272, 403, 363, 404, 363, 498, 398, 497, 398, 625, 523, 625, 524, 656, 985, 654, 986, 564, 1014, 564, 1014, 531, 1452, 532, 1451, 37, 116, 38 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map_barriers"]
+polygon = PoolVector2Array( 1449, 533, 1450, 877, 1404, 876, 1404, 843, 1360, 843, 1360, 905, 1368, 905, 1368, 880, 1386, 880, 1387, 912, 1736, 911, 1737, 532 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map_barriers"]
+position = Vector2( 6, -25 )
+polygon = PoolVector2Array( 1387, 930, 1389, 1002, 1374, 1069, 1273, 1208, 963, 1215, 918, 1153, 916, 1068, 929, 986, 968, 923, 965, 816, 883, 829, 769, 936, 754, 1259, 1227, 1285, 1336, 1277, 1501, 1077, 1476, 962, 1618, 895, 1498, 895 )
 
 [node name="Scene_transition" type="Area2D" parent="."]
 

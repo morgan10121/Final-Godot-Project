@@ -7,6 +7,8 @@
 [ext_resource path="res://Player/Player Assets/Walk.png" type="Texture" id=5]
 [ext_resource path="res://Mobs/Skeleton.gd" type="Script" id=6]
 
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 20.0
 
 [sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 4 )
@@ -160,43 +162,37 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=30]
-radius = 17.0
-
-[sub_resource type="CircleShape2D" id=29]
-radius = 186.687
+[sub_resource type="CircleShape2D" id=32]
+radius = 55.0
 
 [sub_resource type="CircleShape2D" id=31]
 radius = 28.0
 
-[sub_resource type="CircleShape2D" id=32]
-radius = 55.0
+[sub_resource type="CircleShape2D" id=29]
+radius = 186.687
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource( 6 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 26 )
+shape = SubResource( 30 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.4, 23.18 )
 scale = Vector2( 1.1, 1.07375 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 26 )
-shape = SubResource( 30 )
+[node name="attack_range" type="Area2D" parent="."]
 
-[node name="detection_area" type="Area2D" parent="."]
-visible = false
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2( 0, 25 )
-shape = SubResource( 29 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+position = Vector2( 0, 19 )
+shape = SubResource( 32 )
 
 [node name="hit_box" type="Area2D" parent="."]
 
@@ -205,14 +201,16 @@ visible = false
 position = Vector2( 0, 19 )
 shape = SubResource( 31 )
 
-[node name="attack_range" type="Area2D" parent="."]
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-position = Vector2( 0, 19 )
-shape = SubResource( 32 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2( 0, 25 )
+shape = SubResource( 29 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
+[connection signal="area_entered" from="hit_box" to="." method="_on_hit_box_area_entered"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="area_entered" from="hit_box" to="." method="_on_hit_box_area_entered"]
-[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
