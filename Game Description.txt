@@ -1,0 +1,10 @@
+Game Description
+Top down game.
+Move around the map and defeat enemies and heal using crystals.
+
+Objective:
+Find you way to the final level and defeat the boss.
+
+Controls:
+WASD movement,
+E to attack.
