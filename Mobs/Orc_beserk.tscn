@@ -162,6 +162,7 @@ script = ExtResource( 5 )
 position = Vector2( -1, 19 )
 frames = SubResource( 21 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="detection_area" type="Area2D" parent="."]

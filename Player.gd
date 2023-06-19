@@ -7,7 +7,6 @@ var health = 100
 var characterDir = "right"
 var inCombat = false
 var is_alive = true
-var heal = true
 
 var orc_warrior_in_range = false
 var orc_beserk_in_range = false
@@ -129,8 +128,7 @@ func update_health():
 		healthbar.visible = true
 
 func gem():
-	if global.has_gem == true and heal == true:
+	if global.has_gem == true:
 		health += 20
-		heal = false
-
+		global.has_gem = false
 

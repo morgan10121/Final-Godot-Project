@@ -13,9 +13,9 @@ var is_alive = true
 func _physics_process(delta):
 	update_health() 
 	if health <= 0 and is_alive == true:
-		is_alive = false
 		sprite.play("death")
 		health = 0
+		is_alive = false
 		
 	if player_chase and in_combat == false:
 		position += (player.position - position)/speed
@@ -43,7 +43,7 @@ func enemy():
 	pass
 
 func _on_hit_box_area_entered(area):
-	if area.is_in_group("Attack"):
+	if area.is_in_group("Attack") and is_alive == true:
 		in_combat = true
 		print(health)
 		health -= 10
@@ -61,7 +61,7 @@ func _on_AnimatedSprite_animation_finished():
 		get_tree().change_scene("res://Win_screen.tscn")
 
 func _on_attack_range_body_entered(body):
-	if body.has_method("player"):
+	if body.has_method("player") and is_alive == true:
 		in_combat = true
 		sprite.play("attack")
 

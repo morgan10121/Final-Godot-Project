@@ -13,7 +13,6 @@
 [ext_resource path="res://Map/Map Pieces/Chest.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Mobs/Skeleton_seeker.tscn" type="PackedScene" id=12]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "Tileset-Terrain2.png 0"
 0/texture = ExtResource( 3 )
@@ -347,6 +346,7 @@ format = 1
 tile_data = PoolIntArray( -655340, 536870915, 0, -524298, 536870915, 0, -524264, 3, 0, -524261, 536870915, 0, -262123, 4, 0, -262114, 3, 0, -131051, 536870915, 0, -131039, 3, 0, 65526, 536870915, 0, 65550, 0, 0, 196588, 3, 0, 196637, 536870915, 0, 327673, 6, 0, 327674, 3, 0, 262157, 6, 0, 262178, 536870915, 0, 393197, 3, 0, 458744, 4, 0, 458785, 536870915, 0, 786413, 536870915, 0, 917494, 536870917, 0, 852004, 6, 0, 917536, 3, 0, 1114145, 3, 0, 1310752, 3, 0, 1572860, 536870915, 0, 1507364, 0, 0, 1638385, 5, 0, 1638386, 536870915, 0, 1638392, 4, 0, 1703928, 3, 0, 1703934, 3, 0, 1638423, 0, 0, 1900555, 5, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 collision_mask = 7
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -387,9 +387,6 @@ position = Vector2( 606, 119 )
 [node name="Yellow_tree2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 380, 852 )
 
-[node name="VioletGem" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 59, 337 )
-
 [node name="KinematicBody2D" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 70, 200 )
 
@@ -410,3 +407,9 @@ position = Vector2( 220, -97 )
 
 [node name="KinematicBody2D3" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 729, 591 )
+
+[node name="VioletGem" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 139, 580 )
+
+[node name="VioletGem2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 64, 330 )
